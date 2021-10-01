@@ -1,4 +1,4 @@
-test demo:https://elite3312.github.io/
+test demo:https://elite3312.github.io/(will host on other platforms in the future)
 # Quasar Test 
 
 A quasar framework app
