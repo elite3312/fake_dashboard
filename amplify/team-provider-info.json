@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-quasarpractice-dev-112847-authRole",
+      "UnauthRoleArn": "arn:aws:iam::560273488281:role/amplify-quasarpractice-dev-112847-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::560273488281:role/amplify-quasarpractice-dev-112847-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-quasarpractice-dev-112847-deployment",
+      "UnauthRoleName": "amplify-quasarpractice-dev-112847-unauthRole",
+      "StackName": "amplify-quasarpractice-dev-112847",
+      "StackId": "arn:aws:cloudformation:us-east-2:560273488281:stack/amplify-quasarpractice-dev-112847/dcba4500-2330-11ec-9352-06572970cb40",
+      "AmplifyAppId": "di4d0b0v0vpvp"
+    }
+  }
+}
