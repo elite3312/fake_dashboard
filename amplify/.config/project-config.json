@@ -7,8 +7,8 @@
     "config": {
       "SourceDir": "src",
       "DistributionDir": "dist/spa",
-      "BuildCommand": "npm quasar build",
-      "StartCommand": "npm quasar dev"
+      "BuildCommand": "npx quasar build",
+      "StartCommand": "npx quasar dev"
     }
   },
   "providers": [
