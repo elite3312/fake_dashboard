@@ -10,7 +10,7 @@ applications:
       phases:
         build:
           commands:
-            -node -v
+            - node -v
             - npm install
             - npx quasar build
       artifacts:
