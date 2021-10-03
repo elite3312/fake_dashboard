@@ -11,8 +11,8 @@ applications:
         build:
           commands:
             - node -v
-            - sudo apt update
-            - sudo apt install openfortivpn
+            - apt update
+            - apt install openfortivpn
             - nvm install 12.22.1
             - node -v
             - npm install
