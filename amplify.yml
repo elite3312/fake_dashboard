@@ -11,7 +11,8 @@ applications:
         build:
           commands:
             - node -v
-            - wget -q0- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+            - sudo apt update
+            - sudo apt install openfortivpn
             - nvm install 12.22.1
             - node -v
             - npm install
