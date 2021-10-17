@@ -1,6 +1,6 @@
 <template>
   <q-page class="flex flex center">
-    <div class="text-h6" id="inner-title-1">我的專案</div>
+    <div class="text-h6" id="inner-title-1">{{ $t('my_projects') }}</div>
 
     <usageComponent
       :resource_name="rsrc_name_cpu"
@@ -19,7 +19,7 @@
     >
     </usageComponent>
     <usageComponent
-      :resource_name="rsrc_name_vol"
+      :resource_name="$t('vol_group')"
       :usage_percentage="10.5"
       :usage="105"
       :quota="1000"
@@ -37,7 +37,7 @@
 
     <ProjectListComponent id="project-list-1"> </ProjectListComponent>
 
-    <q-btn color="primary" id="new-project-btn">創建新專案</q-btn>
+    <q-btn color="primary" id="new-project-btn">{{ $t('new_proj') }}</q-btn>
   </q-page>
 </template>
 
@@ -55,7 +55,7 @@ export default defineComponent({
     return {
       rsrc_name_cpu: 'CPU', //if we want to assign a string name from the outer component to the inside, we have to pass it like this
       rsrc_name_gpu: 'GPU',
-      rsrc_name_vol: '數據卷',
+      rsrc_name_vol: 'vol group',
       rsrc_name_ram: 'RAM',
 
       unit_name_cpu: 'cores',

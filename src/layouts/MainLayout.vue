@@ -12,14 +12,28 @@
         />
 
         <div>
-          <input type="text" placeholder="搜尋.." />
-          <q-btn flat color="white" label="搜尋" icon="search" />
+          <input type="text" :placeholder="$t('search')" />
+          <q-btn flat color="white" :label="$t('search')" icon="search" />
+          <q-btn
+            flat
+            color="white"
+            label="中文版"
+            icon="translate"
+            @click="setLang_TW"
+          />
+          <q-btn
+            flat
+            color="white"
+            label="English"
+            icon="translate"
+            @click="setLang_EN"
+          />
         </div>
       </q-toolbar>
       <q-btn
         flat
         color="white"
-        label="提醒"
+        :label="$t('bell')"
         icon="notifications_none"
         style="float: right"
       />
@@ -35,15 +49,24 @@
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-item-label header> GAROATUS </q-item-label>
       <q-btn-group>
-        <q-btn push label="前台" icon="visibility" />
-        <q-btn push label="後台" icon="laptop" />
+        <q-btn push :label="$t('frontend')" icon="visibility" />
+        <q-btn push :label="$t('backend')" icon="laptop" />
       </q-btn-group>
       <q-list>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
+        <q-item clickable v-ripple>
+          <q-item-section> {{ $t('homepage') }} </q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple>
+          <q-item-section> {{ $t('my_projects') }} </q-item-section>
+        </q-item>
+
+        <q-item clickable v-ripple>
+          <q-item-section> {{ $t('pending_application') }} </q-item-section>
+        </q-item>
+        <q-item clickable v-ripple>
+          <q-item-section> {{ $t('my_bills') }} </q-item-section>
+        </q-item>
       </q-list>
     </q-drawer>
 
@@ -54,49 +77,24 @@
 </template>
 
 <script lang="ts">
-import EssentialLink from 'components/EssentialLink.vue';
-
-const linksList = [
-  {
-    title: '首頁',
-    //caption: 'quasar.dev',
-    icon: 'home',
-    link: 'https://quasar.dev',
-  },
-  {
-    title: '我的專案',
-    //caption: 'github.com/quasarframework',
-    icon: 'window',
-    link: 'https://github.com/quasarframework',
-  },
-  {
-    title: '我的審核',
-    //caption: 'chat.quasar.dev',
-    icon: 'done_outline',
-    link: 'https://chat.quasar.dev',
-  },
-  {
-    title: '我的帳單',
-    //caption: 'forum.quasar.dev',
-    icon: 'account_balance',
-    link: 'https://forum.quasar.dev',
-  },
-];
-
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
-  name: 'MainLayout',
-
-  components: {
-    EssentialLink,
+  //i18n switch functions
+  methods: {
+    setLang_TW() {
+      this.$i18n.locale = 'zh-tw';
+    },
+    setLang_EN() {
+      this.$i18n.locale = 'en-us';
+    },
   },
+  name: 'MainLayout',
 
   setup() {
     const leftDrawerOpen = ref(false);
 
     return {
-      essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value;

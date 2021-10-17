@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-md">
     <q-table
-      title="專案項目"
+      :title="$t('list_my_projects')"
       :rows="rows"
       :columns="columns"
       row-key="name"
@@ -20,7 +20,7 @@ const columns = [
   {
     name: 'name',
     required: true,
-    label: '名稱',
+    label: 'name',
     align: 'left',
     // field: (row) => row.name,
     field: 'name',
@@ -29,14 +29,23 @@ const columns = [
   {
     name: 'current_cost',
     align: 'center',
-    label: '目前花費',
+    label: 'current cost',
     field: 'current_cost',
     sortable: true,
   },
-  { name: 'module_name', label: '模組', field: 'module_name', sortable: true },
-  { name: 'recent_activity', label: '最新活動', field: 'recent_activity' },
-  { name: 'owner', label: '擁有者', field: 'owner' },
-  { name: 'pinned', label: '釘選', field: 'pinned' },
+  {
+    name: 'module_name',
+    label: 'module',
+    field: 'module_name',
+    sortable: true,
+  },
+  {
+    name: 'recent_activity',
+    label: 'latest activity',
+    field: 'recent_activity',
+  },
+  { name: 'owner', label: 'owner', field: 'owner' },
+  { name: 'pinned', label: 'pinned', field: 'pinned' },
 ];
 
 const rows = [
