@@ -11,7 +11,6 @@ applications:
         build:
           commands:
             - node -v
-            - openfortivpn -help
             - nvm install 12.22.1
             - node -v
             - npm install
