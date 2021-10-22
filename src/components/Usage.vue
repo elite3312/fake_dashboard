@@ -1,9 +1,14 @@
 <template>
-  <q-card class="my-card" bordered="true">
-    <q-card-section color="white">
-      <div class="text-h6">{{ resource_name }} {{ usage_percentage }}%</div>
-      <br />
-      <div class="text-h6">{{ usage }}/{{ quota }} {{ unit_name }}</div>
+  <q-card bordered="true">
+    <q-card-section>
+      <div>
+        <span id="inner-title-2" color="primary" class="text-h7">{{
+          resource_name
+        }}</span>
+        &nbsp; &nbsp; &nbsp;
+        <span class="text-h7">{{ usage_percentage }}%</span>
+      </div>
+      <p class="text-h7">{{ usage }}/{{ quota }} {{ unit_name }}</p>
     </q-card-section>
   </q-card>
 </template>

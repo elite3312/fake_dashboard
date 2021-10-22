@@ -7,10 +7,19 @@ export default {
   //left
   frontend:'frontend',
   backend:'backend',
+  //side-barfront-end
   homepage:'Home Page',
   my_projects:'My Projects',
   pending_application:'Pending Review(s)',
   my_bills:'My Bills',
+
+  
+  //sidebar-backend
+  cloud_admin:'Cloud admin',
+  local_admin:'local admin',
+  iaas_admin:'IAAS admin',
+  hpc_admin:'HPC admin',
+  flow_chart:'flow chart',
   //top
   search:'search',
   bell:'notifications',
@@ -25,7 +34,10 @@ export default {
   latest_activity:'latest activity',
   owner:'owner',
   pinned:'pinned'
-,
+, 
+  taipei:'Taipei',
+  taichung:'taichung',
+  kaohsiung:'kaohsiung',
   //
     new_proj:'Create New Project',
 };

@@ -1,8 +1,9 @@
 <template>
-  <q-page class="flex flex center">
+  <q-page class="flex flex center" id="inner-page-1">
     <div class="text-h6" id="inner-title-1">{{ $t('my_projects') }}</div>
 
     <usageComponent
+      id="usgage-card-1"
       :resource_name="rsrc_name_cpu"
       :usage_percentage="20"
       :usage="20"
@@ -11,6 +12,7 @@
     >
     </usageComponent>
     <usageComponent
+      id="usgage-card-2"
       :resource_name="rsrc_name_ram"
       :usage_percentage="10.5"
       :usage="105"
@@ -19,6 +21,7 @@
     >
     </usageComponent>
     <usageComponent
+      id="usgage-card-3"
       :resource_name="$t('vol_group')"
       :usage_percentage="10.5"
       :usage="105"
@@ -27,6 +30,7 @@
     >
     </usageComponent>
     <usageComponent
+      id="usgage-card-4"
       :resource_name="rsrc_name_gpu"
       :usage_percentage="20"
       :usage="1"
@@ -53,7 +57,7 @@ export default defineComponent({
   components: { UsageComponent, ProjectListComponent },
   data() {
     return {
-      rsrc_name_cpu: 'CPU', //if we want to assign a string name from the outer component to the inside, we have to pass it like this
+      rsrc_name_cpu: 'CPU',
       rsrc_name_gpu: 'GPU',
       rsrc_name_vol: 'vol group',
       rsrc_name_ram: 'RAM',

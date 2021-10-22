@@ -1,8 +1,8 @@
 {
   "name": "my-app-1",
   "version": "0.0.1",
-  "description": "A quasar framework app",
-  "productName": "Quasar Test",
+  "description": "test UI for garaotus",
+  "productName": "Garaotus Test",
   "author": "Perry <perrywu12@gmail.com>",
   "private": true,
   "scripts": {

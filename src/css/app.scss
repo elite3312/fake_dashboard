@@ -1,33 +1,138 @@
 .ml-auto {
   margin-left: auto;
 }
-.my-card {
-  width: 100%;
-  max-width: 250px;
-  height: 100%;
-  max-height: 250px;
-  position: relative;
-  top: 50px;
-  right: 100px;
+//left side panel
+#left-panel-1 {
+  position: absolute;
+  left: 0%;
+  right: 84.38%;
+  top: 0%;
+
+  height: 120%;
+  background: #012f44;
+}
+#garaotus-header {
+  color: #00c4b3;
+  height: 7.2px;
+}
+#left-panel-btn-group-1 {
+  //  position: absolute;
+  left: 0.54%;
+  right: 84.81%;
+  top: 6.11%;
+  bottom: 90.42%;
+
+  background: #ffffff;
+  opacity: 0.5;
+}
+#left-panel-btn-1 {
+  color: #ffffff;
+}
+
+//top side panel
+#top-panle-1 {
+  position: absolute;
+  left: 15.62%;
+  right: -0.1%;
+  top: 0%;
+  bottom: 89.6%;
+
+  background: #cffff4;
+}
+
+//inner page-1
+#inner-page-1 {
+  position: absolute;
+  left: 15.62%;
+  right: 0%;
+  top: 10.4%;
+  bottom: 0.17%;
+  height: 110%;
+  background: #f2f2f2;
 }
 #inner-title-1 {
   position: relative;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 15px;
+  padding-left: 10px;
+  padding-top: 10px;
 }
 
+#usgage-card-1 {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  // padding-bottom: 10px;
+  position: relative;
+  width: 210px;
+  height: 70px;
+
+  top: 30px;
+}
+#inner-title-2 {
+  color: #00c4b3;
+}
+#usgage-card-2 {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  // padding-bottom: 10px;
+  position: relative;
+  width: 210px;
+  height: 70px;
+  left: 20px;
+
+  top: 30px;
+}
+
+#usgage-card-3 {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  //padding-bottom: 10px;
+  position: relative;
+  width: 210px;
+  height: 70px;
+
+  left: 40px;
+
+  top: 30px;
+}
+
+#usgage-card-4 {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  //padding-bottom: 10px;
+  position: relative;
+  width: 210px;
+  height: 70px;
+
+  left: 60px;
+
+  top: 30px;
+}
+
+//inner table
+.my-table-details {
+  font-size: 0.85em;
+  font-style: italic;
+  max-width: 200px;
+  white-space: normal;
+  color: #555;
+  margin-top: 4px;
+}
 #project-list-1 {
+  position: absolute;
   width: 1100px;
   padding-left: 80px;
-  padding-top: 60px;
+  top: 100px;
   padding-right: 50px;
 }
 #new-project-btn {
   position: absolute;
-  right: 20px;
-  bottom: 30px;
-  width: 130px;
-  height: 80px;
+  right: 50px;
+  bottom: 10px;
+  top: 500px;
+  width: 132px;
+  height: 50px;
   border: 3px;
 }

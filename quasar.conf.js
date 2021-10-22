@@ -145,9 +145,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: 'Quasar Test',
-        short_name: 'Quasar Test',
-        description: 'A quasar framework app',
+        name: 'Garaotus UI Prototype 1',
+        short_name: 'garaotus test',
+        description: 'A test UI for garaotus',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
