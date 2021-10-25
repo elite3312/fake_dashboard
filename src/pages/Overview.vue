@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex flex center" id="inner-page-1">
+  <q-page class="flex center" id="inner-page-1">
     <div class="text-h6" id="inner-title-1">{{ $t('my_projects') }}</div>
 
     <usageComponent
@@ -53,10 +53,11 @@ import { defineComponent } from 'vue';
 //import Usage from './usage.vue';
 
 export default defineComponent({
-  name: 'PageIndex',
+  name: 'Overview',
   components: { UsageComponent, ProjectListComponent },
   data() {
     return {
+      //using v-bind to fill in attributes
       rsrc_name_cpu: 'CPU',
       rsrc_name_gpu: 'GPU',
       rsrc_name_vol: 'vol group',

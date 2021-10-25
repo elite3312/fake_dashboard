@@ -44,7 +44,13 @@
             <q-icon v-else name="highlight_off" />
           </q-td>
           <q-td key="name" :props="props">
-            <q-btn icon="forward" @click="goto(props.row.name)" />
+            <q-tabs>
+              <q-route-tab
+                icon="trending_flat"
+                :to="edit_project(props.row.name)"
+                exact
+              />
+            </q-tabs>
           </q-td>
         </q-tr>
       </template>
@@ -136,6 +142,9 @@ export default {
   methods: {
     fill_data() {
       //
+    },
+    edit_project(project_name: string) {
+      return '/project_detail/' + project_name;
     },
   },
   setup() {
