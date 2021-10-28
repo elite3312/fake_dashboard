@@ -25,19 +25,34 @@ export default {
   bell:'notifications',
 
   //usage
-  vol_group:'Volume Group',
+  vol_group:'Volume_Group',
   //list
   list_my_projects:'List My Projects',
   proj_name:'name',
-  cost:'cost',
+  cost:'Cost',
   modules:'modules',
   latest_activity:'latest activity',
   owner:'owner',
   pinned:'pinned'
 , 
   taipei:'Taipei',
-  taichung:'taichung',
-  kaohsiung:'kaohsiung',
+  taichung:'Taichung',
+  kaohsiung:'Kaohsiung',
   //
     new_proj:'Create New Project',
+    
+  //project detail
+  device:'device',
+  container:'container',
+  expand:'expand',
+  applications:'apply', 
+  activities:'activity',
+  bills:'bill',
+  members:'members',
+  settings:'settings',
+  kaohsiung_k8s:'kaohsiung K8s',
+  kaohsiung_k8s2:'kaohsiung K8s2',
+  kaohsiung_openstack:'kaohsiung openstack',
+  taichung_openstack:'taichung openstack',
+  taichung_openstack2:'taichung openstack2',
 };

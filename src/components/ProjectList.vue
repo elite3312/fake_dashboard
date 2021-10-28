@@ -43,11 +43,11 @@
             <q-icon v-if="props.row.pinned" name="push_pin" />
             <q-icon v-else name="highlight_off" />
           </q-td>
-          <q-td key="name" :props="props">
+          <q-td key="project_row_id" :props="props">
             <q-tabs>
               <q-route-tab
                 icon="trending_flat"
-                :to="edit_project(props.row.name)"
+                :to="edit_project(props.row.project_row_id)"
                 exact
               />
             </q-tabs>
@@ -59,6 +59,44 @@
 </template>
 
 <script lang="ts">
+const columns = [
+  {
+    name: 'name',
+    required: true,
+    label: 'name',
+    align: 'left',
+    //field: row => row.name,
+    //format: val => `${val}`,
+    sortable: true,
+  },
+  {
+    name: 'current_cost',
+    align: 'center',
+    label: 'current_cost',
+    field: 'current_cost',
+    sortable: true,
+  },
+  {
+    name: 'module_name',
+    label: 'module_name',
+    field: 'module_name',
+    //sortable: true,
+  },
+  {
+    name: 'latest_activity',
+    label: 'latest_activity',
+    field: 'latest_activity',
+  },
+  { name: 'owner', label: 'owner', field: 'owner' },
+  { name: 'pinned', label: 'pinned', field: 'pinned' },
+  {
+    name: 'project_row_id',
+    label: 'expand',
+    field: 'project_row_id',
+    //sortable: true,
+    //sort: (a, b) => parseInt(a, 10) - parseInt(b, 10),
+  },
+];
 class info_pack {
   taipei: string;
   taichung: string;
@@ -74,6 +112,7 @@ class info_pack {
     taichung_date: string,
     kaohsiung_date: string
   ) {
+    //the chronological order of the setting of member attributes effects how the table is presented
     this.taipei = taipei;
     this.taichung = taichung;
     this.kaohsiung = kaohsiung;
@@ -87,17 +126,17 @@ class project_row {
   current_cost: number;
   module_name: info_pack;
   latest_activity: info_pack;
-
   owner: boolean;
   pinned: boolean;
+  project_row_id: string;
   constructor(
     name: string,
     current_cost: number,
     module_name: info_pack,
     latest_activity: info_pack,
-
     owner: boolean,
-    pinned: boolean
+    pinned: boolean,
+    project_row_id: string
   ) {
     this.name = name;
     this.current_cost = current_cost;
@@ -106,6 +145,7 @@ class project_row {
 
     this.owner = owner;
     this.pinned = pinned;
+    this.project_row_id = project_row_id;
   }
 }
 let list_of_projects: Array<project_row> = [];
@@ -127,8 +167,10 @@ for (var i = 0; i < 7; i++) {
         '2021/10/08',
         '2021/09/01'
       ),
+
       my_owner,
-      my_pin
+      my_pin,
+      'p' + i.toString()
     )
   );
 }
@@ -143,13 +185,14 @@ export default {
     fill_data() {
       //
     },
-    edit_project(project_name: string) {
-      return '/project_detail/' + project_name;
+    edit_project(project_row_id: string) {
+      return '/project_detail/' + project_row_id;
     },
   },
   setup() {
     return {
       list_of_projects,
+      columns,
     };
   },
 };

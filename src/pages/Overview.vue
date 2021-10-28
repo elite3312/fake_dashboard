@@ -70,3 +70,84 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+#inner-page-1 {
+  position: absolute;
+  left: 15.62%;
+  right: 0%;
+  top: 10.4%;
+  bottom: 0.17%;
+  height: 110%;
+  background: #f2f2f2;
+}
+#inner-title-1 {
+  position: relative;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#usgage-card-1 {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  position: absolute;
+  width: 210px;
+  height: 70px;
+  left: 80px;
+  top: 40px;
+}
+
+#usgage-card-2 {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  position: absolute;
+  width: 210px;
+  height: 70px;
+  left: 300px;
+
+  top: 40px;
+}
+
+#usgage-card-3 {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  position: absolute;
+  width: 210px;
+  height: 70px;
+
+  left: 520px;
+
+  top: 40px;
+}
+
+#usgage-card-4 {
+  padding-right: 10px;
+  padding-left: 10px;
+
+  position: absolute;
+  width: 210px;
+  height: 70px;
+
+  left: 740px;
+
+  top: 40px;
+}
+#project-list-1 {
+  position: absolute;
+  width: 1100px;
+  padding-left: 80px;
+  top: 100px;
+  padding-right: 50px;
+}
+#new-project-btn {
+  position: absolute;
+  right: 232px;
+  top: 520px;
+  width: 132px;
+  height: 50px;
+  border: 3px;
+}
+</style>

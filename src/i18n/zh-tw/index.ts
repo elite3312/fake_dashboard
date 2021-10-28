@@ -39,4 +39,19 @@ export default {
 
   //
   new_proj:'創建新專案',
+
+  //project detail
+  device:'設備',
+  container:'容器',
+  expand:'展開',
+  applications:'申請',
+  activities:'活動',
+  bills:'帳單',
+  members:'成員',
+  settings:'設定',
+  kaohsiung_k8s:'高雄 K8s',
+  kaohsiung_k8s2:'高雄 K8s2',
+  kaohsiung_openstack:'高雄 openstack',
+  taichung_openstack:'台中 openstack',
+  taichung_openstack2:'台中 openstack2',
 };

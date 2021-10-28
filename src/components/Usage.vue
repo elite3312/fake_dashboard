@@ -2,9 +2,7 @@
   <q-card bordered="true">
     <q-card-section>
       <div>
-        <span id="inner-title-2" color="primary" class="text-h7">{{
-          resource_name
-        }}</span>
+        <span id="inner-title-2" class="text-h7">{{ resource_name }}</span>
         &nbsp; &nbsp; &nbsp;
         <span class="text-h7">{{ usage_percentage }}%</span>
       </div>
@@ -39,3 +37,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+#inner-title-2 {
+  color: #00c4b3;
+}
+</style>

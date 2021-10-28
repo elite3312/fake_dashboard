@@ -35,13 +35,13 @@
         />
       </q-btn-group>
       <q-list v-if="show_front_end">
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/">
           <q-item-section id="left-panel-btn-1">
             {{ $t('homepage') }}
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple to="/">
           <q-item-section id="left-panel-btn-1">
             {{ $t('my_projects') }}
           </q-item-section>
@@ -126,3 +126,41 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+#left-panel-1 {
+  position: absolute;
+  left: 0%;
+  right: 84.38%;
+  top: 0%;
+
+  height: 120%;
+  background: #012f44;
+}
+#garaotus-header {
+  color: #00c4b3;
+  height: 7.2px;
+}
+#left-panel-btn-group-1 {
+  left: 0.54%;
+  right: 84.81%;
+  top: 6.11%;
+  bottom: 90.42%;
+
+  background: #ffffff;
+  opacity: 0.5;
+}
+#left-panel-btn-1 {
+  color: #ffffff;
+}
+
+#top-panle-1 {
+  position: absolute;
+  left: 15.62%;
+  right: -0.1%;
+  top: 0%;
+  bottom: 89.6%;
+
+  background: #cffff4;
+}
+</style>
