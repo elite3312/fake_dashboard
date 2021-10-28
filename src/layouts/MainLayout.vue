@@ -11,12 +11,19 @@
       </div>
     </q-toolbar>
     <q-btn
+      id="main_layout_btn_1"
+      flat
+      label="admin"
+      icon="panorama_fish_eye"
+      style="float: right"
+    />
+    <q-btn
+      id="main_layout_btn_1"
       flat
       :label="$t('bell')"
       icon="notifications_none"
       style="float: right"
     />
-    <q-btn flat label="admin" icon="person" style="float: right" />
 
     <div class="column" id="left-panel-1" show-if-above bordered>
       <q-item-label header id="garaotus-header"> GARAOTUS </q-item-label>
@@ -36,51 +43,60 @@
       </q-btn-group>
       <q-list v-if="show_front_end">
         <q-item clickable v-ripple to="/">
+          <GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('homepage') }}
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple to="/">
+        <q-item clickable v-ripple to="/"
+          ><GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('my_projects') }}
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple
+          ><GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('pending_application') }}
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple
+          ><GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('my_bills') }}
           </q-item-section>
         </q-item>
       </q-list>
       <q-list v-else>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple
+          ><GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('cloud_admin') }}
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple
+          ><GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('local_admin') }}
           </q-item-section>
         </q-item>
 
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple
+          ><GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('iaas_admin') }}
           </q-item-section>
         </q-item>
-        <q-item clickable v-ripple>
+        <q-item clickable v-ripple
+          ><GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('hpc_admin') }}
           </q-item-section> </q-item
-        ><q-item clickable v-ripple>
+        ><q-item clickable v-ripple
+          ><GreyCropSquare></GreyCropSquare>
           <q-item-section id="left-panel-btn-1">
             {{ $t('flow_chart') }}
           </q-item-section>
@@ -96,9 +112,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-
+import GreyCropSquare from 'src/components/svg_grey_crop_square.vue';
 export default defineComponent({
   name: 'MainLayout',
+  components: { GreyCropSquare },
   //i18n switch functions
   methods: {
     setLang_TW() {
@@ -128,6 +145,9 @@ export default defineComponent({
 </script>
 
 <style scoped>
+#main_layout_btn_1 {
+  top: 20px;
+}
 #left-panel-1 {
   position: absolute;
   left: 0%;

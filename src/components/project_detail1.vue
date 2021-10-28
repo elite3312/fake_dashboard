@@ -88,7 +88,7 @@ export default {
   position: absolute;
   top: 100px;
   left: 300px;
-  width: 950px;
+  width: 1200px;
 }
 #title-1 {
   color: #00c4b3;

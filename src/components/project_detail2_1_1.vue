@@ -7,7 +7,7 @@
           v-model="tab2"
           dense
           class="bg-primary text-white"
-          active-color="grey"
+          active-color="white"
           indicator-color="primary"
           narrow-indicator
         >
@@ -25,6 +25,7 @@
           vertical
           transition-prev="jump-up"
           transition-next="jump-up"
+          id="project_detail_1_1_tab1"
         >
           <q-tab-panel name="device"
             ><ProjectDetail2_1_1_1></ProjectDetail2_1_1_1>
@@ -46,4 +47,9 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+#project_detail_1_1_tab1 {
+  height: 100%;
+  background-color: #f2f2f2;
+}
+</style>

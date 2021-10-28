@@ -60,7 +60,7 @@ export default {
   position: absolute;
   top: 230px;
   left: 300px;
-  width: 950px;
+  width: 1200px;
 }
 #q-card-2-module-btn {
   background: #00c4b3;
