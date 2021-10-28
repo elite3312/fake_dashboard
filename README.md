@@ -10,7 +10,7 @@ nvm install 12.22.1
 
 ## Install the dependencies
 
-```bash
+
 npm install
 ```
 
