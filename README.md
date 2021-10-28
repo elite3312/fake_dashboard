@@ -4,9 +4,9 @@ Test UI for GARAOTUS using the quasar framework
 
 ## requires node 12.22.1
 
-'''bash
+```bash
 nvm install 12.22.1
-'''bash
+```bash
 
 ## Install the dependencies
 
