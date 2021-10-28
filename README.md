@@ -6,7 +6,7 @@ Test UI for GARAOTUS using the quasar framework
 
 ```bash
 nvm install 12.22.1
-```bash
+
 
 ## Install the dependencies
 
