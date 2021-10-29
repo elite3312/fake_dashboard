@@ -14,28 +14,32 @@
           <q-tab
             name="modules"
             :label="$t('modules')"
-            @click="onClickButton(1)"
+            @click="onClickButton($t('modules'))"
           />
           <q-tab
             name="activities"
             :label="$t('activities')"
-            @click="onClickButton(2)"
+            @click="onClickButton($t('activities'))"
           />
           <q-tab
             name="applications"
             :label="$t('applications')"
-            @click="onClickButton(3)"
+            @click="onClickButton($t('applications'))"
           />
-          <q-tab name="bills" :label="$t('bills')" @click="onClickButton(4)" />
+          <q-tab
+            name="bills"
+            :label="$t('bills')"
+            @click="onClickButton($t('bills'))"
+          />
           <q-tab
             name="members"
             :label="$t('members')"
-            @click="onClickButton(5)"
+            @click="onClickButton($t('members'))"
           />
           <q-tab
             name="settings"
             :label="$t('settings')"
-            @click="onClickButton(6)"
+            @click="onClickButton($t('settings'))"
           />
         </q-tabs>
       </template>
@@ -78,16 +82,16 @@ export default defineComponent({
     return { tab: ref('q-card-2-top') };
   },
   methods: {
-    onClickButton(p: number) {
+    onClickButton(p: string) {
       console.log(p);
       //alert(p);
       //I found out that in order for emit to work, I had to add the defineComponent declaration. Not sure why.
       this.$emit('level_2_breadcrumb_set', p);
     },
-    onClickChild_level_3(value: number) {
+    onClickChild_level_3(value: string) {
       this.$emit('level_3_breadcrumb_set', value);
     },
-    onClickChild_level_4(value: number) {
+    onClickChild_level_4(value: string) {
       this.$emit('level_4_breadcrumb_set', value);
     },
   },

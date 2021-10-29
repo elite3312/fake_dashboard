@@ -1,7 +1,7 @@
 <template>
   <BreadCrumb1
     :project_name="get_project_name()"
-    :level_2_breadcrumb="get_level_2_breadcrumb()"
+    :level_2_breadcrumb="get_level_2_breadcrumb() + get_level_3_breadcrumb()"
     :level_3_breadcrumb="get_level_4_breadcrumb()"
   ></BreadCrumb1>
   <ProjectDetail1
@@ -13,10 +13,7 @@
     :ram="get_ram()"
     :module_name="get_module_name()"
   ></ProjectDetail1>
-  <!--
-  <h1 id="test">{{ level_2_breadcrumb_data }}</h1>
-  <h1 id="test">{{ level_2_breadcrumb }}</h1>
-  -->
+
   <ProjectDetail2
     @level_2_breadcrumb_set="onClickChild_level_2"
     @level_3_breadcrumb_set="onClickChild_level_3"
@@ -45,77 +42,16 @@ export default defineComponent({
       else if (this.pid.toString() == 'p6') return 'project 6';
     },
     get_level_2_breadcrumb() {
-      switch (this.level_2_breadcrumb) {
-        case 1:
-          return this.$t('modules') + ':' + this.get_level_3_breadcrumb();
-          break;
-        case 2:
-          return this.$t('activities');
-          break;
-        case 3:
-          return this.$t('applications');
-          break;
-
-        case 4:
-          return this.$t('bills');
-          break;
-
-        case 5:
-          return this.$t('members');
-          break;
-
-        case 6:
-          return this.$t('settings');
-          break;
-
-        default:
-          return 'error retrieving breadcrumb';
-          break;
-      }
+      return this.level_2_breadcrumb;
     },
     get_level_3_breadcrumb() {
-      switch (this.level_3_breadcrumb) {
-        case 1:
-          return this.$t('kaohsiung_k8s');
-          break;
-        case 2:
-          return this.$t('kaohsiung_k8s2');
-          break;
-        case 3:
-          return this.$t('kaohsiung_openstack');
-          break;
-
-        case 4:
-          return this.$t('taichung_openstack');
-          break;
-
-        case 5:
-          return this.$t('taichung_openstack2');
-          break;
-
-        default:
-          return 'error retrieving breadcrumb';
-          break;
-      }
+      return this.level_3_breadcrumb;
     },
     get_level_4_breadcrumb() {
-      switch (this.level_4_breadcrumb) {
-        case 1:
-          return this.$t('device');
-          break;
-        case 2:
-          return this.$t('container');
-          break;
-        case 3:
-          return this.$t('vol_group');
-          break;
-
-        default:
-          return 'error retrieving breadcrumb';
-          break;
-      }
+      return this.level_4_breadcrumb;
     },
     get_module_name() {
+      //we will be using dummy module names until axios is up
       if (this.pid.toString() == 'p0') return 'k8s';
       else if (this.pid.toString() == 'p1') return 'k8s';
       else if (this.pid.toString() == 'p2') return 'k8s';
@@ -143,15 +79,18 @@ export default defineComponent({
     get_gpu() {
       return '1';
     },
-    onClickChild_level_2(value: number) {
+    onClickChild_level_2(value: string) {
       console.log(value);
       this.level_2_breadcrumb = value; //we will be recieving data from the child's 'emit'
+      this.level_3_breadcrumb = '';
+      this.level_4_breadcrumb = '';
     },
-    onClickChild_level_3(value: number) {
+    onClickChild_level_3(value: string) {
       console.log(value);
       this.level_3_breadcrumb = value; //we will be recieving data from the child's 'emit'
+      this.level_4_breadcrumb = '';
     },
-    onClickChild_level_4(value: number) {
+    onClickChild_level_4(value: string) {
       console.log(value);
       this.level_4_breadcrumb = value; //we will be recieving data from the child's 'emit'
     },
@@ -160,9 +99,9 @@ export default defineComponent({
   data() {
     return {
       pid: this.$route.params.id as string,
-      level_2_breadcrumb: 1 as number, //1 for modules, 2 for activities, 3 for applications, 4 for bills, 5 for members, 6 for settings
-      level_3_breadcrumb: 1 as number, //similar to the relationship above, only this time it is with the second layer
-      level_4_breadcrumb: 1 as number, //similar to the relationship above, only this time it is with the third layer
+      level_2_breadcrumb: '' as string,
+      level_3_breadcrumb: '' as string, //similar to the relationship above, only this time it is with the second layer
+      level_4_breadcrumb: '' as string, //similar to the relationship above, only this time it is with the third layer
     };
   },
 

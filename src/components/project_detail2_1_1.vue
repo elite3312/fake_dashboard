@@ -14,17 +14,17 @@
           <q-tab
             name="device"
             :label="$t('device')"
-            @click="onClickButton(1)"
+            @click="onClickButton($t('device'))"
           />
           <q-tab
             name="container"
             :label="$t('container')"
-            @click="onClickButton(2)"
+            @click="onClickButton($t('container'))"
           />
           <q-tab
             name="vol_group"
             :label="$t('vol_group')"
-            @click="onClickButton(3)"
+            @click="onClickButton($t('vol_group'))"
           />
         </q-tabs>
       </template>
@@ -56,7 +56,7 @@ export default defineComponent({
   name: 'ProjectDetail2_1_1',
   components: { ProjectDetail2_1_1_1 },
   methods: {
-    onClickButton(p: number) {
+    onClickButton(p: string) {
       this.$emit('level_4_breadcrumb_set', p);
     },
   },

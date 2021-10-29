@@ -13,27 +13,27 @@
         <q-tab
           name="kaohsiung1"
           :label="$t('kaohsiung_k8s')"
-          @click="onClickButton(1)"
+          @click="onClickButton($t('kaohsiung_k8s'))"
         />
         <q-tab
           name="kaohsiung2"
           :label="$t('kaohsiung_k8s2')"
-          @click="onClickButton(2)"
+          @click="onClickButton($t('kaohsiung_k8s2'))"
         />
         <q-tab
           name="kaohsiung3"
           :label="$t('kaohsiung_openstack')"
-          @click="onClickButton(3)"
+          @click="onClickButton($t('kaohsiung_openstack'))"
         />
         <q-tab
           name="taichung1"
           :label="$t('taichung_openstack')"
-          @click="onClickButton(4)"
+          @click="onClickButton($t('taichung_openstack'))"
         />
         <q-tab
           name="taichung2"
           :label="$t('taichung_openstack2')"
-          @click="onClickButton(5)"
+          @click="onClickButton($t('taichung_openstack2'))"
         />
       </q-tabs>
     </template>
@@ -65,10 +65,10 @@ export default defineComponent({
   name: 'ProjectDetail2_1',
   components: { ProjectDetail2_1_1 },
   methods: {
-    onClickButton(p: number) {
+    onClickButton(p: string) {
       this.$emit('level_3_breadcrumb_set', p);
     },
-    onClickChild_level_4(p: number) {
+    onClickChild_level_4(p: string) {
       this.$emit('level_4_breadcrumb_set', p);
     },
   },
