@@ -51,7 +51,7 @@
   </q-card>
 </template>
 
-<script>
+<script >
 export default {
   name: 'ProjectDetailQCard1',
   setup() {

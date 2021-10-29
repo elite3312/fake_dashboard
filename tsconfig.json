@@ -4,6 +4,6 @@
     "baseUrl": ".",
     // this aligns with Vue's browser support
 
-  
+  "strict": true,
   }
 }

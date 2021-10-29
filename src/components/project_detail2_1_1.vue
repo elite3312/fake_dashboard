@@ -11,9 +11,21 @@
           indicator-color="primary"
           narrow-indicator
         >
-          <q-tab name="device" :label="$t('device')" />
-          <q-tab name="container" :label="$t('container')" />
-          <q-tab name="vol_group" :label="$t('vol_group')" />
+          <q-tab
+            name="device"
+            :label="$t('device')"
+            @click="onClickButton(1)"
+          />
+          <q-tab
+            name="container"
+            :label="$t('container')"
+            @click="onClickButton(2)"
+          />
+          <q-tab
+            name="vol_group"
+            :label="$t('vol_group')"
+            @click="onClickButton(3)"
+          />
         </q-tabs>
       </template>
 
@@ -36,16 +48,22 @@
   </q-card>
 </template>
 
-<script>
+<script lang="ts">
 import { ref } from 'vue';
+import { defineComponent } from 'vue';
 import ProjectDetail2_1_1_1 from 'src/components/project_detail2_1_1_1.vue';
-export default {
+export default defineComponent({
   name: 'ProjectDetail2_1_1',
   components: { ProjectDetail2_1_1_1 },
+  methods: {
+    onClickButton(p: number) {
+      this.$emit('level_4_breadcrumb_set', p);
+    },
+  },
   setup() {
     return { tab2: ref('q-card-2_1_1-top') };
   },
-};
+});
 </script>
 <style scoped>
 #project_detail_1_1_tab1 {

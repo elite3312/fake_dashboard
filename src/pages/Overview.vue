@@ -92,7 +92,7 @@ export default defineComponent({
   padding-left: 10px;
 
   position: absolute;
-  width: 210px;
+  width: 230px;
   height: 70px;
   left: 80px;
   top: 40px;
@@ -103,9 +103,9 @@ export default defineComponent({
   padding-left: 10px;
 
   position: absolute;
-  width: 210px;
+  width: 230px;
   height: 70px;
-  left: 300px;
+  left: 328px;
 
   top: 40px;
 }
@@ -115,10 +115,10 @@ export default defineComponent({
   padding-left: 10px;
 
   position: absolute;
-  width: 210px;
+  width: 230px;
   height: 70px;
 
-  left: 520px;
+  left: 575px;
 
   top: 40px;
 }
@@ -128,10 +128,10 @@ export default defineComponent({
   padding-left: 10px;
 
   position: absolute;
-  width: 210px;
+  width: 230px;
   height: 70px;
 
-  left: 740px;
+  left: 820px;
 
   top: 40px;
 }

@@ -11,12 +11,32 @@
           indicator-color="primary"
           narrow-indicator
         >
-          <q-tab name="modules" :label="$t('modules')" />
-          <q-tab name="activities" :label="$t('activities')" />
-          <q-tab name="applications" :label="$t('applications')" />
-          <q-tab name="bills" :label="$t('bills')" />
-          <q-tab name="members" :label="$t('members')" />
-          <q-tab name="settings" :label="$t('settings')" />
+          <q-tab
+            name="modules"
+            :label="$t('modules')"
+            @click="onClickButton(1)"
+          />
+          <q-tab
+            name="activities"
+            :label="$t('activities')"
+            @click="onClickButton(2)"
+          />
+          <q-tab
+            name="applications"
+            :label="$t('applications')"
+            @click="onClickButton(3)"
+          />
+          <q-tab name="bills" :label="$t('bills')" @click="onClickButton(4)" />
+          <q-tab
+            name="members"
+            :label="$t('members')"
+            @click="onClickButton(5)"
+          />
+          <q-tab
+            name="settings"
+            :label="$t('settings')"
+            @click="onClickButton(6)"
+          />
         </q-tabs>
       </template>
 
@@ -32,7 +52,10 @@
           <q-tab-panel name="modules"
             ><!-- modules tab-->
 
-            <ProjectDetail2_1></ProjectDetail2_1>
+            <ProjectDetail2_1
+              @level_3_breadcrumb_set="onClickChild_level_3"
+              @level_4_breadcrumb_set="onClickChild_level_4"
+            ></ProjectDetail2_1>
           </q-tab-panel>
 
           <q-tab-panel name="activities">
@@ -44,16 +67,31 @@
   </q-card>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue';
 import { ref } from 'vue';
 import ProjectDetail2_1 from 'src/components/project_detail2_1.vue';
-export default {
+export default defineComponent({
   name: 'ProjectDetail2',
   components: { ProjectDetail2_1 },
   setup() {
     return { tab: ref('q-card-2-top') };
   },
-};
+  methods: {
+    onClickButton(p: number) {
+      console.log(p);
+      //alert(p);
+      //I found out that in order for emit to work, I had to add the defineComponent declaration. Not sure why.
+      this.$emit('level_2_breadcrumb_set', p);
+    },
+    onClickChild_level_3(value: number) {
+      this.$emit('level_3_breadcrumb_set', value);
+    },
+    onClickChild_level_4(value: number) {
+      this.$emit('level_4_breadcrumb_set', value);
+    },
+  },
+});
 </script>
 <style scoped>
 #q-card-2 {
