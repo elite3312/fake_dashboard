@@ -61,7 +61,7 @@ export default defineComponent({
     },
   },
   setup() {
-    return { tab2: ref('q-card-2_1_1-top') };
+    return { tab2: ref('device') };
   },
 });
 </script>

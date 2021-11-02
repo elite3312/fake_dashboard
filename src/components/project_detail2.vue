@@ -79,7 +79,7 @@ export default defineComponent({
   name: 'ProjectDetail2',
   components: { ProjectDetail2_1 },
   setup() {
-    return { tab: ref('q-card-2-top') };
+    return { tab: ref('modules') };
   },
   methods: {
     onClickButton(p: string) {

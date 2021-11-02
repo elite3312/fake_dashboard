@@ -73,7 +73,7 @@ export default defineComponent({
     },
   },
   setup() {
-    return { tab1: ref('q-card-2_1-top') };
+    return { tab1: ref('kaohsiung1') };
   },
 });
 </script>
