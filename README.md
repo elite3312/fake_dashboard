@@ -1,4 +1,4 @@
-Test UI for GARAOTUS using the quasar framework
+practice quasar project
 
 ## build instructions
 
